@@ -1,0 +1,83 @@
+.wrapper{
+    margin-top:60px;
+    background:#fff;
+    border-radius:28px;
+    border:1px solid #F2E8E8;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    overflow:hidden;
+    box-shadow:0 8px 30px rgba(0,0,0,.05);
+}
+
+.card{
+    padding:40px 30px;
+    text-align:center;
+    border-right:1px solid #F3EAEA;
+    transition:.25s;
+}
+
+.card:last-child{
+    border-right:none;
+}
+
+.card:hover{
+    background:#FFF8F9;
+}
+
+.card img{
+    width:54px;
+    height:54px;
+    margin-bottom:18px;
+}
+
+.card h3{
+    font-family:"Cormorant Garamond",serif;
+    font-size:32px;
+    color:#222;
+    margin-bottom:14px;
+}
+
+.card p{
+    color:#666;
+    line-height:1.8;
+    font-size:15px;
+}
+.iconsCards{
+    width: 200px !important;
+    height: 200px !important;
+    display: inline !important;
+}
+
+@media(max-width:950px){
+    .wrapper{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .card:nth-child(2){
+        border-right:none;
+    }
+
+    .card:nth-child(-n+2){
+        border-bottom:1px solid #F3EAEA;
+    }
+}
+
+@media(max-width:650px){
+    .wrapper{
+        grid-template-columns:1fr;
+    }
+
+    .card{
+        border-right:none;
+        border-bottom:1px solid #F3EAEA;
+    }
+
+    .card:last-child{
+        border-bottom:none;
+    }
+}
+@media (max-width: 500px){
+    .right{
+        display:none;
+    }
+}

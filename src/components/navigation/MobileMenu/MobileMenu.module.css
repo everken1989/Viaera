@@ -1,0 +1,52 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 90;
+  background: rgba(0,0,0,.35);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 220ms ease, visibility 220ms ease;
+}
+
+.open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.panel {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: min(86vw, 360px);
+  height: 100%;
+  padding: 26px;
+  background: #fff;
+  transform: translateX(100%);
+  transition: transform 220ms ease;
+  box-shadow: -20px 0 60px rgba(0,0,0,.18);
+}
+
+.open .panel { transform: translateX(0); }
+
+.close {
+  margin-left: auto;
+  display: grid;
+  place-items: center;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.nav {
+  display: grid;
+  gap: 18px;
+  margin-top: 50px;
+}
+
+.nav a {
+  font-family: var(--font-heading);
+  font-size: 1.7rem;
+  text-decoration: none;
+}

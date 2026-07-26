@@ -1,0 +1,54 @@
+.container {
+  width: 100%;
+  max-width: 1100px;
+  margin: auto;
+  padding: 80px 0;
+}
+
+.title {
+  text-align: center;
+  font-size: 2.3rem;
+  margin-bottom: 40px;
+}
+
+.card {
+  background: white;
+  border-radius: 18px;
+  margin-bottom: 20px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.question {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 24px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.question:hover {
+  color: var(--color-highlight);
+}
+
+.answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height .35s ease, padding .35s ease;
+  padding: 0 32px;
+}
+
+.answer p {
+  color: #666;
+  line-height: 1.7;
+}
+
+.open {
+  max-height: 300px;
+  padding: 0 32px 24px;
+}

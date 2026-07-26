@@ -1,0 +1,123 @@
+.wrapper{
+    margin:70px 0;
+    padding:48px;
+    background:#fff;
+    border:1px solid #F2E8E8;
+    border-radius:28px;
+    box-shadow:0 8px 30px rgba(0,0,0,.05);
+}
+.content{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:48px;
+}
+.text{
+    max-width:520px;
+}
+.eyebrow{
+    display:block;
+    margin-bottom:12px;
+    color:#ffd1d8;
+    font-size:12px;
+    font-weight:700;
+    letter-spacing:.18em;
+}
+.text h2{
+    margin:0 0 12px;
+    color:#222;
+    font-family:"Cormorant Garamond",serif;
+    font-size:46px;
+    line-height:1;
+}
+.text p{
+    margin:0;
+    color:#666;
+    font-size:16px;
+    line-height:1.7;
+}
+.socials{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:flex-end;
+    gap:14px;
+}
+.socialLink{
+    min-width:118px;
+    padding:14px 18px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:9px;
+    color:#222;
+    background:#FAF8F5;
+    border:1px solid #EEE5DF;
+    border-radius:999px;
+    font-size:14px;
+    font-weight:600;
+    text-decoration:none;
+    transition:transform .2s ease,background-color .2s ease,border-color .2s ease,color .2s ease;
+}
+.socialLink:hover{
+    color:#fff;
+    background:var(--color-primary);
+    border-color:#ffd1d8;
+    transform:translateY(-2px);
+}
+.socialLink:focus-visible{
+    outline:3px solid rgba(200,29,37,.25);
+    outline-offset:3px;
+}
+.icon{
+    font-size:22px!important;
+}
+.compact{
+    padding:28px 34px;
+}
+.compact .text h2{
+    font-size:36px;
+}
+.compact .socialLink{
+    min-width:auto;
+    width:48px;
+    height:48px;
+    padding:0;
+}
+.compact .socialLink span{
+    display:none;
+}
+@media(max-width:850px){
+    .content{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:30px;
+    }
+    .socials{
+        justify-content:flex-start;
+    }
+}
+@media(max-width:550px){
+    .wrapper{
+        margin:50px 0;
+        padding:32px 22px;
+        border-radius:22px;
+    }
+    .text h2{
+        font-size:38px;
+    }
+    .socials{
+        width:100%;
+        display:grid;
+        grid-template-columns:repeat(2,1fr);
+    }
+    .socialLink{
+        min-width:0;
+        width:100%;
+    }
+    .compact .socials{
+        display:flex;
+    }
+    .compact .socialLink{
+        width:46px;
+    }
+}

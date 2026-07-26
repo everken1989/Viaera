@@ -1,0 +1,19 @@
+.wrapper {
+  max-width: 760px;
+  margin-bottom: 44px;
+}
+
+.center {
+  margin-inline: auto;
+  text-align: center;
+}
+
+.left { text-align: left; }
+
+.wrapper h2 {
+  margin: 0 0 var(--space-4);
+  font-size: clamp(2rem, 4vw, 3.2rem);
+}
+
+.wrapper h2 span { color: var(--color-primary); }
+.wrapper p { margin: 0; color: var(--color-muted); }

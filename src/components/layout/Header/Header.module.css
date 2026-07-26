@@ -1,0 +1,39 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 80;
+  background: rgba(255,255,255,.92);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(240,223,227,.8);
+}
+
+.inner {
+  min-height: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-6);
+}
+
+.logo {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-decoration: none;
+}
+
+.menuButton {
+  display: none;
+  border: 0;
+  background: transparent;
+  color: var(--color-text);
+  cursor: pointer;
+}
+
+@media (max-width: 800px) {
+  .menuButton {
+    display: grid;
+    place-items: center;
+  }
+}
