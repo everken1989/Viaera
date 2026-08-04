@@ -17,7 +17,13 @@ import SocialSection from "@/components/social/SocialSection";
 import FloatingWhatsApp from "@/components/whatsapp/FloatingWhatsApp";
 import { data } from "@/utils/dataWhatsApp";
 
-const courses = [
+type Course = [
+    string | null,
+    string,
+    string,
+    string[]?
+];
+const courses: Course[] = [
   [
     mexico,
     "Español",

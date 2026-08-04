@@ -9,7 +9,7 @@ import styles from "./SocialSection.module.css";
 export type SocialPlatform =
   | "instagram"
   | "facebook"
-  | "youtube"
+  //| "youtube"
   | "tiktok"
   | "website";
 
@@ -29,7 +29,7 @@ interface SocialSectionProps {
 const iconMap: Record<SocialPlatform, SvgIconComponent> = {
   instagram: InstagramIcon,
   facebook: FacebookIcon,
-  youtube: YouTubeIcon,
+  //youtube: YouTubeIcon,
   tiktok: MusicNoteIcon,
   website: LanguageIcon,
 };
@@ -37,7 +37,7 @@ const iconMap: Record<SocialPlatform, SvgIconComponent> = {
 const platformNames: Record<SocialPlatform, string> = {
   instagram: "Instagram",
   facebook: "Facebook",
-  youtube: "YouTube",
+  //youtube: "YouTube",
   tiktok: "TikTok",
   website: "Sitio web",
 };

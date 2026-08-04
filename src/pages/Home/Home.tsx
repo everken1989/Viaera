@@ -4,6 +4,7 @@ import PageContainer from "@/components/layout/PageContainer/PageContainer";
 import SectionTitle from "@/components/ui/TitleSection/TitleSection";
 import { homeFeatures } from "@/data/home";
 import heroImage from "@/assets/images/personalizados.png";
+import heroImageMobile from "@/assets/images/personalizados-mobile.png"
 import styles from "./Home.module.css";
 import ContactForm from "@/components/forms/ContactForm/ContactForm"
 import FAQAccordion from "@/components/accordion/FAQAccordion";
@@ -12,14 +13,17 @@ import FormatQuoteRoundedIcon from '@mui/icons-material/FormatQuoteRounded';
 import AppDivider from "@/components/ui/Divider/AppDivider";
 import FloatingWhatsApp from "@/components/whatsapp/FloatingWhatsApp";
 import { data } from "@/utils/dataWhatsApp";
+import { useMediaQuery } from "@mui/material";
 
 export default function Home() {
+  const isMobile = useMediaQuery("(max-width:768px)");
   return (
     <>
       <section
         className={styles.hero}
         style={{
-          backgroundImage: `linear-gradient(90deg, rgba(12,14,24,.88), rgba(12,14,24,.22)), url("${heroImage}")`,
+          backgroundImage: isMobile ? `linear-gradient(90deg, rgba(12,14,24,.88), rgba(12,14,24,.22)), url("${heroImageMobile}")` 
+                                    : `linear-gradient(90deg, rgba(12,14,24,.88), rgba(12,14,24,.22)), url("${heroImage}")`  ,
         }}
       >
         <PageContainer>
@@ -28,7 +32,7 @@ export default function Home() {
               message={data.message}
           />
           <div className={styles.heroContent}>
-            <h1>Viaja, estudia y conecta <span>con el mundo</span></h1>
+            <h1>Viaja, estudia <br/>y conecta <span>con <br/>el mundo</span></h1>
             <p>Aprende, crea y trabaja desde cualquier lugar con experiencias diseñadas para ti.</p>
             <div className={styles.actions}>
               <Button to="/cursos">Ver cursos</Button>
@@ -69,8 +73,8 @@ export default function Home() {
           </div>
         </PageContainer>
       </section>
-      <FAQAccordion items={faqItems} />
       <ContactForm />
+      <FAQAccordion items={faqItems} />
     </>
   );
 }
