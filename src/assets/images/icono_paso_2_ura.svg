@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="180 120 664 760">
+<defs>
+<linearGradient id="r" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0%" stop-color="#D71920"/><stop offset="100%" stop-color="#A9060B"/>
+</linearGradient>
+</defs>
+
+<circle cx="512" cy="545" r="285" fill="#FFFDF9" stroke="#E6D2B7" stroke-width="2"/>
+
+<circle cx="512" cy="248" r="74" fill="url(#r)"/>
+<text x="512" y="278" text-anchor="middle"
+font-family="Georgia,'Times New Roman',serif"
+font-size="100" font-weight="700" fill="#fff">2</text>
+
+<!-- Target -->
+<circle cx="512" cy="560" r="118" fill="none" stroke="#1F1F1F" stroke-width="8"/>
+<circle cx="512" cy="560" r="74" fill="none" stroke="#1F1F1F" stroke-width="8"/>
+<circle cx="512" cy="560" r="18" fill="#1F1F1F"/>
+
+<!-- Arrow -->
+<line x1="590" y1="482" x2="520" y2="552" stroke="#1F1F1F" stroke-width="10" stroke-linecap="round"/>
+<polygon points="590,482 640,470 602,520" fill="#1F1F1F"/>
+<line x1="575" y1="497" x2="548" y2="470" stroke="#1F1F1F" stroke-width="8" stroke-linecap="round"/>
+</svg>

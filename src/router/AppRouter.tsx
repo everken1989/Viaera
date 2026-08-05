@@ -8,6 +8,7 @@ import Contacto from "@/pages/Contacto/Contacto";
 export default function AppRouter() {
   return (
     <Routes>
+   
       <Route element={<MainLayout />}>
         <Route path="/" element={<Home />} />
         <Route path="/itinerarios" element={<Itinerarios />} />

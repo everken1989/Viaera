@@ -6,6 +6,10 @@
         fill: #fff;
       }
 
+      .cls-3 {
+        fill: #b32025;
+      }
+
       .cls-2 {
         font-family: SegoeUIVariable-SemiboldSmall, 'Segoe UI Variable';
         font-size: 46px;
@@ -16,9 +20,9 @@
     </style>
   </defs>
   <text class="cls-2" transform="translate(130.36 317.05) scale(1.22 1)"><tspan x="0" y="0">ITINERARIOS</tspan></text>
-  <rect class="cls-1" x="555.83" y="288.86" width="80.95" height="4.85"/>
-  <rect class="cls-1" x="21.44" y="288.86" width="80.95" height="4.85"/>
-  <ellipse class="cls-1" cx="559.8" cy="186.68" rx="20.55" ry="18.56"/>
+  <rect class="cls-3" x="555.83" y="288.86" width="80.95" height="4.85"/>
+  <rect class="cls-3" x="21.44" y="288.86" width="80.95" height="4.85"/>
+  <ellipse class="cls-3" cx="559.8" cy="186.68" rx="20.55" ry="18.56"/>
   <g>
     <path class="cls-1" d="M0,140.91V0h30.54v141.75c0,57.68,24.38,75.81,55.72,75.81s56.91-18.13,56.91-75.81V0h29.27v140.91c0,77.03-37.19,103.51-86.19,103.51S0,217.94,0,140.91Z"/>
     <path class="cls-1" d="M402.07,240.03l-61.11-104.83c32.6-7.99,53.96-30.25,53.96-67.65C394.92,17.55,359.81,0,310.93,0h-75.18v24.78h4.7c.05-.01.11-.03.16-.04,0,0,0,.03,0,.04h65.93c37.35,0,57.91,11.21,57.91,42.78s-20.56,46.25-57.91,46.25h-70.79v126.23h30.54v-101.45h43.37l57.78,101.45h34.62Z"/>

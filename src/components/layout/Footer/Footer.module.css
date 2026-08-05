@@ -3,6 +3,9 @@
   background: var(--color-secondary);
   color: #fff;
 }
+.logo {
+  width: 150px;
+}
 
 .inner {
   display: flex;

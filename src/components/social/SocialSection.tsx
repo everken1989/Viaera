@@ -21,6 +21,7 @@ export interface SocialLink {
 
 interface SocialSectionProps {
   title?: string;
+  bussiness?: string;
   description?: string;
   links: SocialLink[];
   variant?: "default" | "compact";
@@ -46,6 +47,7 @@ export default function SocialSection({
   title = "Síguenos",
   description = "Descubre recomendaciones, cultura y experiencias auténticas de Japón.",
   links,
+  bussiness,
   variant = "default",
 }: SocialSectionProps) {
   return (
@@ -56,7 +58,7 @@ export default function SocialSection({
     >
       <div className={styles.content}>
         <div className={styles.text}>
-          <span className={styles.eyebrow}>URA ITINERARIOS</span>
+          <span className={styles.eyebrow}>{bussiness}</span>
           <h2>{title}</h2>
           <p>{description}</p>
         </div>

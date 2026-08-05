@@ -1,93 +1,378 @@
+/* ===== Hero ===== */
 .hero {
-  min-height: 560px;
+  min-height: 600px;
   display: grid;
   align-items: center;
   color: #fff;
   background-size: cover;
   background-image:
-        linear-gradient(90deg,
-        rgba(0,0,0,.82),
-        rgba(0,0,0,.18)),
-        var(--hero-image);
-  background-position: left;
+    linear-gradient(90deg, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.1)),
+    var(--hero-image);
+  background-position: center;
+}
+.logo {
+  width: 200px;
 }
 
 .heroContent {
-  max-width: 720px;
-  padding: 80px 0;
-  position: relative;
-  right: 10px;
-}
-
-.heroContent > span {
-  display: inline-block;
-  margin-bottom: 16px;
-  color: #ffd1d8;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: .12em;
+  max-width: 640px;
+  padding: 64px 0;
 }
 
 .heroContent h1 {
-  margin: 22px 0 22px;
-  font-size: clamp(3rem, 6vw, 5.7rem);
-  line-height: 1;
+  margin: 0;
+  font-size: clamp(2.4rem, 5vw, 3.4rem);
+  line-height: 1.15;
+  font-weight: 500;
 }
 
 .heroContent em {
-  color: var(--color-primary);
+  color: var(--color-red);
   font-style: normal;
+  font-weight: 700;
 }
 
-.heroContent p {
-  max-width: 620px;
-  color: rgba(255,255,255,.9);
-  font-size: 1.15rem;
-}
-
-.values {
+/* ===== Mi historia ===== */
+.historia {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 0.85fr 1fr;
+  gap: 56px;
+  align-items: center;
+}
+
+.historiaImg {
+  width: 100%;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
+  object-fit: cover;
+}
+
+.label {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--color-red);
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.historiaContent p {
+  color: var(--color-muted);
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.quoteBox {
+  position: relative;
+  margin: 24px 0 0;
+  padding: 24px 28px;
+  background: #f6f6f6;
+  border-radius: var(--radius-md);
+  color: #222;
+  font-weight: 600;
+  font-size: 1.05rem;
+}
+
+.quoteMark {
+  color: var(--color-red);
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-right: 4px;
+  line-height: 0;
+  vertical-align: -6px;
+}
+
+/* ===== Cómo funciona ===== */
+.funcionaSection {
+  background: #f6f6f6;
+}
+
+.labelCenter {
+  display: block;
+  text-align: center;
+  margin-bottom: 40px;
+  color: var(--color-red);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.step p {
+  margin-top: 14px;
+  font-weight: 600;
+}
+
+.stepCircleWrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stepNumber {
+  position: absolute;
+  top: -6px;
+  left: -6px;
+  width: 24px;
+  height: 24px;
+  display: grid;
+  place-items: center;
+  background: var(--color-red);
+  color: #fff;
+  border-radius: 50%;
+  font-size: 0.75rem;
+  font-weight: 700;
+  z-index: 2;
+}
+
+.stepIcon {
+  z-index: 1;
+  width: 200px;
+  height: 200px;
+  display: grid;
+  place-items: center;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: var(--shadow-card);
+}
+
+.stepIcon img {
+  width: 150px;
+  height: 150px;
+}
+
+.stepLine {
+  position: absolute;
+  left: 100%;
+  top: 50%;
+  width: 100%;
+  border-top: 2px dashed var(--color-border);
+  z-index: 1;
+}
+
+@media (max-width: 850px) {
+  .steps {
+    grid-template-columns: 1fr 1fr;
+    row-gap: 40px;
+  }
+  .stepLine {
+    display: none;
+  }
+}
+
+/* ===== Paquetes ===== */
+.cardsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   gap: 22px;
 }
+.subTitles {
+  color: var(--color-red) !important;
+}
 
-.values article {
-  min-height: 250px;
-  padding: 34px;
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 40px 24px;
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-card);
 }
 
-.values h3 {
-  margin-top: 0;
-  color: var(--color-primary);
-  font-size: 2rem;
+.card h3 {
+  margin: 16px 0 4px;
+  font-size: 1.3rem;
 }
 
-.values p { color: var(--color-muted); }
-
-.img {
-  border-radius: 10px;
+.cardPopular {
+  border-color: #e8b93a;
 }
 
-.cont {
-  display: flex;
-  justify-content: space-around;
-  align-items: flex-end;
+.cardBadge {
+  position: absolute;
+  top: -14px;
+  padding: 6px 14px;
+  background: #e8b93a;
+  color: #fff;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
 }
 
-@media (max-width: 850px) {
-  .values { grid-template-columns: 1fr; }
+.cardIcon {
+  width: 56px;
+  height: 56px;
 }
-@media(max-width: 600px) {
-  .heroContent h1 {
-    font-size: clamp(3rem, 4vw, 6rem);
+
+.cardPrice {
+  display: block;
+  margin-bottom: 12px;
+  color: var(--color-red);
+  font-weight: 700;
+  font-size: 1.4rem;
+}
+
+.cardDesc {
+  color: var(--color-muted);
+  margin-bottom: 24px;
+  min-height: 44px;
+}
+
+@media (max-width: 950px) {
+  .cardsGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 550px) {
+  .cardsGrid {
+    grid-template-columns: 1fr;
   }
 }
 
-@media (max-width: 450px){
-  .hero { 
-    background-position: center;
+/* ===== Reseñas ===== */
+.resenasSection {
+  background: #f9f4f2;
+}
+
+.reviewsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.reviewCard {
+  padding: 32px;
+  background: #fff;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
+}
+
+.stars {
+  color: var(--color-red);
+  letter-spacing: 3px;
+  margin-bottom: 12px;
+}
+
+.reviewCard p {
+  color: #333;
+  font-style: italic;
+  min-height: 76px;
+}
+
+.reviewAuthor {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--color-border);
+  flex-shrink: 0;
+}
+
+.reviewAuthor div {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.9rem;
+}
+
+.reviewAuthor span {
+  color: var(--color-muted);
+}
+
+@media (max-width: 850px) {
+  .reviewsGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ===== Libro incluido ===== */
+.libro {
+  display: grid;
+  grid-template-columns: 0.7fr 1fr;
+  gap: 56px;
+  align-items: center;
+}
+
+.libroImage {
+  width: 100%;
+  max-width: 500px;
+  justify-self: center;
+}
+
+.libroContent h2 {
+  margin: 4px 0 8px;
+  font-size: 2rem;
+}
+
+.libroContent > p {
+  color: var(--color-muted);
+  margin-bottom: 24px;
+}
+
+.iconRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 28px;
+  margin-bottom: 24px;
+}
+
+.iconItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.iconItem img {
+  width: 85px;
+  height: 85px;
+}
+
+.banner {
+  display: inline-block;
+  padding: 10px 18px;
+  background: #fdeceb;
+  color: var(--color-red);
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.button {
+  background-color: var(--color-red) !important;
+}
+
+@media (max-width: 850px) {
+  .historia,
+  .libro {
+    grid-template-columns: 1fr;
+  }
+  .libroImage {
+    max-width: 220px;
   }
 }

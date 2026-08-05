@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import PageContainer from "@/components/layout/PageContainer/PageContainer";
+import logo from "@/assets/images/viaera-logo.svg";
 import styles from "./Footer.module.css";
 
 export default function Footer() {
@@ -7,7 +8,7 @@ export default function Footer() {
     <footer className={styles.footer}>
       <PageContainer className={styles.inner}>
         <div>
-          <strong>VIAERA</strong>
+          <img className={styles.logo} src={logo} alt="Viaera" />
           <p>Viaja, estudia y conecta con el mundo.</p>
         </div>
 

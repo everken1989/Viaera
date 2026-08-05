@@ -4,6 +4,9 @@ import SectionTitle from "@/components/ui/TitleSection/TitleSection";
 import styles from "./Contacto.module.css";
 import FloatingWhatsApp from "@/components/whatsapp/FloatingWhatsApp";
 import { data } from "@/utils/dataWhatsApp";
+import SocialSection from "@/components/social/SocialSection";
+import { socialLinks } from "@/utils/socialLinks";
+
 export default function Contacto() {
   return (
     <section className={`page-section ${styles.page}`}>
@@ -24,6 +27,12 @@ export default function Contacto() {
           </div>
           <ContactForm />
         </div>
+            <SocialSection 
+              title="Contactanos con viaera en Redes Sociales"
+              description="Síguenos para continuar descubriendo Japón."
+              links={socialLinks}
+              bussiness="VIAERA"
+              variant="compact"/>
       </PageContainer>
     </section>
   );

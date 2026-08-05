@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 18px;
-  padding: 28px;
+  padding: 50px;
   background: #fff;
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
@@ -32,8 +32,11 @@
 
 .full { grid-column: 1 / -1; }
 .success { grid-column: 1 / -1; color: #16803d; }
-
+@media(max-width: 1400px) {
+  .form {padding: 20px; }
+}
 @media (max-width: 700px) {
   .form { grid-template-columns: 1fr; }
   .full, .success { grid-column: 1; }
+  .form {padding: 20px; }
 }

@@ -6,7 +6,9 @@ import {openWhatsApp} from "@/utils/openWhatsApp";
 import { data } from "@/utils/dataWhatsApp";
 export default function ContactForm() {
   const [status, setStatus] = useState<"idle" | "loading" | "success">("idle");
-
+  type Props = {
+    className?: string;
+  }
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     setStatus("loading");

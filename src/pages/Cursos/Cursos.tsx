@@ -145,6 +145,7 @@ export default function Cursos() {
                     title="Conecta con Nuestros Cursos Idiomas"
                     description="Síguenos para continuar descubriendo Japón."
                     links={socialLinks}
+                    bussiness="Cursos e Idiomas"
                     variant="compact"
                     />          
         </PageContainer>
