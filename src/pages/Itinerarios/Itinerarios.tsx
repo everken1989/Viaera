@@ -22,9 +22,9 @@ import iconoPaso4 from "@/assets/images/ICONO 4.svg";
 import sakuraIcon from "@/assets/images/sakura.svg";
 import toriiIcon from "@/assets/images/puerta-torii.svg";
 import coronaIcon from "@/assets/images/corona.svg";
+import palacioIcon from "@/assets/images/palacio.svg"
 // TODO: falta el icono de "Ura Profundo" (pagoda) — no vino en los assets subidos.
 // Se usa torii como placeholder temporal hasta tener el ícono definitivo.
-import profundoIconPlaceholder from "@/assets/images/puerta-torii.svg";
 
 // Iconos — libro incluido
 import ramenIcon from "@/assets/images/ramen.svg";
@@ -62,7 +62,7 @@ const paquetes = [
     to: "/contacto",
   },
   {
-    icon: profundoIconPlaceholder,
+    icon: palacioIcon,
     nombre: "Ura Profundo",
     precio: "$139 USD",
     descripcion: "Para descubrir un Japón más auténtico.",
@@ -84,8 +84,8 @@ const paquetes = [
 
 const resenas = [
   {
-    texto: "Nos ahorró muchísimas horas de investigación. Todo estaba perfectamente organizado.",
-    nombre: "Mariana G.",
+    texto: "Yo tome un tour con Zuleiza cuando visite Japón con unos amigos. La verdad a pesar de que éramos un grupo grande nos ayudó mucho guiarnos por la ciudad y a encontrar lugares ricos para comer. Tanto así que algunos han vuelto a Japón a esos restaurantes más de gente local.Otro punto que en lo personal me encantó es que me ayudó a entender más el contexto de las personas japonesas, el cómo ellos ven ciertas cosas (bueno y malo) no se guardó nada. Además que te lo explique alguien en español y entendiendo tu contexto como latinoamericano la verdad da una perspectiva muy diferente y que deja más que un tour normal.Muy recomendada !! Además que ella nos ayudó un montón en la comunicación japonés/español",
+    nombre: "Luis Lara",
     lugar: "México",
   },
   {
@@ -139,16 +139,16 @@ export default function Itinerarios() {
             <div className={styles.historiaContent}>
               <span className={styles.label}>Mi historia</span>
               <p>
-                Un sueño que parecía imposible me llevó a Japón. Después de
-                años de esfuerzo, trabajo y aprendizaje, hoy comparto todo lo
-                que he vivido para que tú descubras un Japón auténtico desde
-                el primer día, ahorrando tiempo y evitando errores.
+                Desde los 12 años soñaba con vivir en Japón. Como muchas personas, todo comenzó con el anime y los doramas, pero con el tiempo descubrí que lo que realmente me enamoró fue su idioma, su cultura y su forma de vida.
+                Durante años trabajé, estudié y ahorré para convertir ese sueño en realidad. Hasta que un día entendí que el momento perfecto nunca llegaría, así que hice las maletas y emprendí el viaje que cambiaría mi vida.
+                Vivir en Japón me permitió conocer mucho más que sus lugares famosos. Aprendí de sus costumbres, cometí errores, descubrí rincones que rara vez aparecen en las guías y comprendí que muchas dificultades pueden evitarse cuando alguien comparte su experiencia contigo.
+              </p>
+              <p>
+                Así nació Ura: para acompañarte a descubrir Japón con más confianza. No para decirte exactamente qué hacer, sino para darte las herramientas, los consejos y la inspiración que me habría gustado tener antes de mi primer viaje.
+                Porque Japón no es solo un destino por conocer. Es una experiencia que merece convertirse en tu propia historia.
               </p>
               <blockquote className={styles.quoteBox}>
-                <FormatQuoteRoundedIcon sx={{ color: 
-                 "var(--color-red)", scale:3, transform: 'rotate(180deg)', margin:"1em"}}/>
-                Viajar debería ser disfrutar la experiencia, no pasar semanas
-                investigando.
+                "Viajar con la tranquilidad de saber que <b>alguien que ya recorrió este camino ha preparado cada detalle para ti."</b>
               </blockquote>
             </div>
           </div>
@@ -194,7 +194,6 @@ export default function Itinerarios() {
                 )}
                 <img className={styles.cardIcon} src={p.icon} alt="" />
                 <h3>{p.nombre}</h3>
-                <span className={styles.cardPrice}>{p.precio}</span>
                 <p className={styles.cardDesc}>{p.descripcion}</p>
                 <Button
                   className={styles.button}

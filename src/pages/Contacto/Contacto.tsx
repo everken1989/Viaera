@@ -21,14 +21,14 @@ export default function Contacto() {
               description="Cuéntanos si te interesa un curso, un itinerario o una experiencia personalizada."
             />
             <div className={styles.details}>
-              <p><strong>Correo</strong><br />hola@viaera.com</p>
-              <p><strong>Atención</strong><br />Lunes a viernes</p>
+              <p><strong>Correo</strong><br />uraitinerarios@outlook.com</p>
+              <p><strong>Atención</strong><br />Lunes a Domingo 9:00AM a 20:00PM</p>
             </div>
           </div>
           <ContactForm />
         </div>
             <SocialSection 
-              title="Contactanos con viaera en Redes Sociales"
+              title="Contactanos en Redes Sociales"
               description="Síguenos para continuar descubriendo Japón."
               links={socialLinks}
               bussiness="VIAERA"

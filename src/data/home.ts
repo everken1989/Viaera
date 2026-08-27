@@ -6,8 +6,8 @@ import type { FeatureItem } from "@/types/content";
 export const homeFeatures: FeatureItem[] = [
   {
     title: "Explora",
-    highlight: "itinerarios personalizados",
-    description: "Descubre Japón con experiencias organizadas a tu medida y vive el país con una perspectiva local.",
+    highlight: "Japón como un Local",
+    description: "Itinerarios personalizados, diseñados por personas que han vivido en Japón, para que explores sus rincones, descubras su esencia y vivas el país más allá de lo turístico.",
     image: viajesImage,
     actionLabel: "Ver itinerarios",
     to: "/itinerarios",

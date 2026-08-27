@@ -17,6 +17,23 @@ import { useMediaQuery } from "@mui/material";
 
 export default function Home() {
   const isMobile = useMediaQuery("(max-width:768px)");
+  const testimonials = [
+  {
+    name: "Ulises ",
+    language: "Japonés",
+    quote: "Me gusta mucho la dinámica de Zule para enseñar. Siempre utiliza ejemplos útiles y explica cada tema con mucha paciencia. Lo que más disfruto es cómo integra el contexto histórico y cultural, haciendo que aprender japonés sea mucho más interesante y enriquecedor.",
+  },
+  {
+    name: "Jing ",
+    language: "Español",
+    quote: "Learning Spanish with Zuleiza has been one of the best decisions I’ve made. She makes every lesson engaging and always makes me feel comfortable, even when I make mistakes. Instead of making me feel discouraged, she turns every mistake into an opportunity to learn. I’ve gained so much confidence speaking Spanish, and I genuinely look forward to every class. Thank you for making language learning such a positive and enjoyable experience!",
+  },
+  {
+    name: "José ",
+    language: "Inglés",
+    quote: "Tomar clases con Zule ha sido una de las mejores decisiones que he tomado para aprender inglés. Adapta cada clase a tu nivel, necesidades y ritmo, haciendo que aprender sea mucho más efectivo y motivador. Su paciencia, energía y forma de explicar crean un ambiente donde puedes preguntar y equivocarte sin miedo. *¡Gracias, Zule, por hacer del inglés una experiencia tan positiva!",
+  },
+]
   return (
     <>
       <section
@@ -46,8 +63,8 @@ export default function Home() {
         <PageContainer>
           <SectionTitle
             title="Descubre nuevas formas de"
-            highlight="crecer"
-            description="Viajes, idiomas y formación digital reunidos en una sola experiencia."
+            highlight="Ganarte la vida"
+            description="Aprende idiomas y desarrolla las habilidades digitales que necesitas para trabajar, viajar y construir tu vida como nómada digital."
           />
           <div className={styles.grid}>
             {homeFeatures.map((feature) => (
@@ -58,21 +75,30 @@ export default function Home() {
       </section>
 
       <section className={`page-section ${styles.testimonials}`}>
-        <PageContainer>
-          <SectionTitle title="Lo que dicen nuestros" highlight="alumnos" />
-          <div className={styles.testimonialGrid}>
-            {[
-              "Aprendí japonés y viajé con mucha más seguridad.",
-              "Los cursos son completos, claros y muy prácticos.",
-              "Ahora puedo trabajar y estudiar desde cualquier lugar.",
-            ].map((quote) => (
-              <blockquote key={quote}><FormatQuoteRoundedIcon sx={{ color: 
-                "var(--color-primary)", scale:3, transform: 'rotate(180deg)', margin:"0.5em"}}/>
-              {quote}”<AppDivider /></blockquote>
-            ))}
-          </div>
-        </PageContainer>
-      </section>
+   <PageContainer>
+    <SectionTitle title="Lo que dicen nuestros" highlight="alumnos" />
+    <div className={styles.testimonialGrid}>
+      {testimonials.map((testimonial) => (
+        <blockquote key={testimonial.name}>
+          <FormatQuoteRoundedIcon
+            sx={{
+              color: "var(--color-primary)",
+              scale: 3,
+              transform: "rotate(180deg)",
+              margin: "0.5em",
+            }}
+          />
+          <p>{testimonial.quote}</p>
+          <AppDivider />
+          <footer>
+            <strong>{testimonial.name}</strong>
+            <span><b>{testimonial.language}</b></span>
+          </footer>
+        </blockquote>
+      ))}
+    </div>
+  </PageContainer>
+</section>
       <ContactForm />
       <FAQAccordion items={faqItems} />
     </>

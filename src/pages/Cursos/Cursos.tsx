@@ -27,7 +27,7 @@ const courses: Course[] = [
   [
     mexico,
     "Español",
-    "Comunicación práctica para estudiar, trabajar o viajar con confianza.",
+    "Practical communication skills to study, work, or travel with confidence.",
     [
       "Beginner to advanced levels",
       "Conversation and pronunciation",
@@ -97,9 +97,7 @@ export default function Cursos() {
                         message={data.message}
           />
           <div className={styles.heroContent}>
-            <span>Cursos de idiomas y tecnología</span>
-            <h1>Aprende habilidades <em>para conectar con el mundo</em></h1>
-            <p>Formación práctica, clara y enfocada en proyectos reales.</p>
+            <h1>Aprende idiomas<em> para conectar con <br/>el mundo</em></h1>
             <Button to="/contacto">Solicitar información</Button>
           </div>
         </PageContainer>
@@ -110,7 +108,7 @@ export default function Cursos() {
           <TitleSection
             title="Encuentra el curso"
             highlight="ideal para ti"
-            description="Idiomas, diseño y tecnología con acompañamiento y enfoque práctico."
+            description="Desarrolla tus habilidades lingüísticas, amplía tus oportunidades profesionales y prepárate para comunicarte con confianza en cualquier parte del mundo."
           />
           <div className={styles.grid}>
            {courses.map(([image, title, text, list]) => (
@@ -137,9 +135,9 @@ export default function Cursos() {
           <BenefitsSection items={options} />
           <ExperienceSection
                       title="Hola, soy Zuleiza."
-                      description="He vivido, estudiado y trabajado en Japón, además de aprender idiomas desde cero viviendo experiencias reales en diferentes países.
-                      Por eso, mis clases no se enfocan únicamente en memorizar reglas, sino en ayudarte a comunicarte de forma natural, entender nuevas culturas y sentirte más seguro usando el idioma en la vida real.
-                      Mi objetivo es que aprender idiomas se sienta práctico, dinámico y motivador."
+                      description="Soy profesora de idiomas con 6 años de experiencia, trabajando en México y Japón con niños, adolescentes y adultos de diferentes nacionalidades, tanto extranjeros como latinoamericanos. He impartido español, inglés y japonés, adaptando cada clase al nivel, ritmo y necesidades de cada estudiante, y utilizando distintos idiomas de apoyo cuando es necesario.
+Mi objetivo es que mis estudiantes no solo aprendan un idioma, sino que también ganen confianza, disfruten el proceso y conecten con nuevas culturas y oportunidades.
+Creo que nunca dejamos de aprender. Por eso, continúo preparándome mediante cursos, clases y certificaciones para seguir creciendo como profesora y ofrecer una enseñanza cada vez mejor."
                     />
           <SocialSection
                     title="Conecta con Nuestros Cursos Idiomas"
