@@ -11,6 +11,7 @@ import BenefitsSection from "@/components/benefits/BenefitsSection";
 import mexico from "@/assets/images/mexico.png";
 import inglaterra from "@/assets/images/inglaterra.png";
 import japon from "@/assets/images/japon.png";
+import eds from "@/assets/images/eds.svg";
 import ExperienceSection from "@/components/experience/ExperienceSection";
 import { socialLinks } from "@/utils/socialLinks";
 import SocialSection from "@/components/social/SocialSection";
@@ -18,13 +19,18 @@ import FloatingWhatsApp from "@/components/whatsapp/FloatingWhatsApp";
 import { data } from "@/utils/dataWhatsApp";
 
 type Course = [
+    boolean,
     string | null,
     string,
     string,
     string[]?
 ];
+
+const link: string = "https://eds-tutors.netlify.app/#especialidades"
+
 const courses: Course[] = [
   [
+    false,
     mexico,
     "Español",
     "Practical communication skills to study, work, or travel with confidence.",
@@ -36,6 +42,7 @@ const courses: Course[] = [
     ],
   ],
   [
+    false,
     inglaterra,
     "Inglés",
     "Comprensión, conversación y situaciones cotidianas.",
@@ -47,6 +54,7 @@ const courses: Course[] = [
     ],
   ],
   [
+    false,
     japon,
     "Japonés",
     "Japonés útil para la vida diaria, viajes y cultura.",
@@ -57,9 +65,9 @@ const courses: Course[] = [
       "Cultura japonesa",
     ],
   ],
-  [null, "UI Design", "Diseño web y mobile desde wireframes hasta prototipos."],
-  [null, "Programación", "React, TypeScript, APIs y proyectos reales."],
-  [null, "3D y Motion", "Modelado, render, animación y portafolio."],
+  [true, eds, "UI Design", "Diseño web y mobile desde wireframes hasta prototipos."],
+  [true, eds, "Programación", "React, TypeScript, APIs y proyectos reales."],
+  [true, eds, "3D y Motion", "Modelado, render, animación y portafolio."],
 ];
 const options = [
   {
@@ -111,14 +119,24 @@ export default function Cursos() {
             description="Desarrolla tus habilidades lingüísticas, amplía tus oportunidades profesionales y prepárate para comunicarte con confianza en cualquier parte del mundo."
           />
           <div className={styles.grid}>
-           {courses.map(([image, title, text, list]) => (
+            {courses.map(([isEds, image, title, text, list]) => (
               <article key={title}>
                 {image && (
-                  <img
-                    className={styles.countries}
-                    src={image ? image : ''}
-                    alt={title ? image : ''}
-                  />
+                  isEds ? (
+                    <a href={link}>
+                      <img
+                        className={styles.countries}
+                        src={image}
+                        alt={title}
+                      />
+                    </a>
+                  ) : (
+                    <img
+                      className={styles.countries}
+                      src={image}
+                      alt={title}
+                    />
+                  )
                 )}
                 <h3>{title}</h3>
                 <p>{text}</p>
